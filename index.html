@@ -1,0 +1,297 @@
+<html>
+  <head>
+    <title>Neat-Team-Scouting</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1><bolder>Neat Team Scouting!</bolder></h1>
+
+      <form>
+        <label for="group-number">Group number:</label>
+        <input
+          type="text"
+          id="group-number"
+          name="group-number"
+          placeholder="NeatTeam: Liran"
+        /><br />
+
+        <label for="game-number">Game number:</label>
+        <input
+          type="text"
+          id="game-number"
+          name="game-number"
+          placeholder="1-60"
+        /><br /><br />
+
+        <h3>Autonomous:</h3>
+
+        <label for="left-community">Left the community:</label>
+        <input
+          type="checkbox"
+          id="left-community"
+          name="left-community"
+        /><br />
+
+        <label for="bottom-cube-auto">Bottom cube:</label>
+        <input
+          type="button"
+          id="bottom-cube-auto-add"
+          name="bottom-cube-auto"
+          value="+"
+          onclick="changeValue(true, 'bottom-cube-auto-show')"
+        />
+        <input
+          type="button"
+          id="bottom-cube-auto-decr"
+          name="bottom-cube-auto"
+          value="-"
+          onclick="changeValue(false, 'bottom-cube-auto-show')"
+        />
+        <text id="bottom-cube-auto-show" name="bottom-cube-auto">0</text><br />
+
+        <label for="middle-cube-auto">Middle cube:</label>
+        <input
+          type="button"
+          id="middle-cube-auto-add"
+          name="middle-cube-auto"
+          value="+"
+          onclick="changeValue(true, 'middle-cube-auto-show')"
+        />
+        <input
+          type="button"
+          id="middle-cube-auto-decr"
+          name="middle-cube-auto"
+          value="-"
+          onclick="changeValue(false, 'middle-cube-auto-show')"
+        />
+        <text id="middle-cube-auto-show" name="middle-cube-auto">0</text><br />
+
+        <label for="upper-cube-auto">Upper cube:</label>
+        <input
+          type="button"
+          id="upper-cube-auto-add"
+          name="upper-cube-auto"
+          value="+"
+          onclick="changeValue(true, 'upper-cube-auto-show')"
+        />
+        <input
+          type="button"
+          id="upper-cube-auto-decr"
+          name="upper-cube-auto"
+          value="-"
+          onclick="changeValue(false, 'upper-cube-auto-show')"
+        />
+        <text id="upper-cube-auto-show" name="upper-cube-auto">0</text><br />
+
+        <label for="bottom-cone-auto">Bottom cone:</label>
+        <input
+          type="button"
+          id="bottom-cone-auto-add"
+          name="bottom-cone-auto"
+          value="+"
+          onclick="changeValue(true, 'bottom-cone-auto-show')"
+        />
+        <input
+          type="button"
+          id="bottom-cone-auto-decr"
+          name="bottom-cone-auto"
+          value="-"
+          onclick="changeValue(false, 'bottom-cone-auto-show')"
+        />
+        <text id="bottom-cone-auto-show" name="bottom-cone-auto">0</text><br />
+
+        <label for="middle-cone-auto">Middle cone:</label>
+        <input
+          type="button"
+          id="middle-cone-auto-add"
+          name="middle-cone-auto"
+          value="+"
+          onclick="changeValue(true, 'middle-cone-auto-show')"
+        />
+        <input
+          type="button"
+          id="middle-cone-auto-decr"
+          name="middle-cone-auto"
+          value="-"
+          onclick="changeValue(false, 'middle-cone-auto-show')"
+        />
+        <text id="middle-cone-auto-show" name="middle-cone-auto">0</text><br />
+
+        <label for="upper-cone-auto">Upper cone:</label>
+        <input
+          type="button"
+          id="upper-cone-auto-add"
+          name="upper-cone-auto"
+          value="+"
+          onclick="changeValue(true, 'upper-cone-auto-show')"
+        />
+        <input
+          type="button"
+          id="upper-cone-auto-decr"
+          name="upper-cone-auto"
+          value="-"
+          onclick="changeValue(false, 'upper-cone-auto-show')"
+        />
+        <text id="upper-cone-auto-show" name="upper-cone-auto">0</text><br />
+
+        <label for="balancing-auto">Balancing:</label>
+        <input
+          type="checkbox"
+          id="balancing-auto"
+          name="balancing-auto"
+        /><br /><br />
+
+        <h3>Teleop:</h3>
+
+        <label for="bottom-cube-tele">Bottom cube:</label>
+        <input
+          type="button"
+          id="bottom-cube-tele-add"
+          name="bottom-cube-tele"
+          value="+"
+          onclick="changeValue(true, 'bottom-cube-tele-show')"
+        />
+        <input
+          type="button"
+          id="bottom-cube-tele-decr"
+          name="bottom-cube-tele"
+          value="-"
+          onclick="changeValue(false, 'bottom-cube-tele-show')"
+        />
+        <text id="bottom-cube-tele-show" name="bottom-cube-tele">0</text><br />
+
+        <label for="middle-cube-tele">Middle cube:</label>
+        <input
+          type="button"
+          id="middle-cube-tele-add"
+          name="middle-cube-tele"
+          value="+"
+          onclick="changeValue(true, 'middle-cube-tele-show')"
+        />
+        <input
+          type="button"
+          id="middle-cube-tele-decr"
+          name="middle-cube-tele"
+          value="-"
+          onclick="changeValue(false, 'middle-cube-tele-show')"
+        />
+        <text id="middle-cube-tele-show" name="bottom-cube-tele">0</text><br />
+
+        <label for="upper-cube-tele">Upper cube:</label>
+        <input
+          type="button"
+          id="upper-cube-tele-add"
+          name="upper-cube-tele"
+          value="+"
+          onclick="changeValue(true, 'upper-cube-tele-show')"
+        />
+        <input
+          type="button"
+          id="upper-cube-tele-decr"
+          name="upper-cube-tele"
+          value="-"
+          onclick="changeValue(false, 'upper-cube-tele-show')"
+        />
+        <text id="upper-cube-tele-show" name="upper-cube-tele">0</text><br />
+
+        <label for="bottom-cone-tele">Bottom cone:</label>
+        <input
+          type="button"
+          id="bottom-cone-tele-add"
+          name="bottom-cone-tele"
+          value="+"
+          onclick="changeValue(true, 'bottom-cone-tele-show')"
+        />
+        <input
+          type="button"
+          id="bottom-cone-tele-decr"
+          name="bottom-cone-tele"
+          value="-"
+          onclick="changeValue(false, 'bottom-cone-tele-show')"
+        />
+        <text id="bottom-cone-tele-show" name="bottom-cone-tele">0</text><br />
+
+        <label for="middle-cone-tele">Middle cone:</label>
+        <input
+          type="button"
+          id="middle-cone-tele-add"
+          name="middle-cone-tele"
+          value="+"
+          onclick="changeValue(true, 'middle-cone-tele-show')"
+        />
+        <input
+          type="button"
+          id="middle-cone-tele-decr"
+          name="middle-cone-tele"
+          value="-"
+          onclick="changeValue(false, 'middle-cone-tele-show')"
+        />
+        <text id="middle-cone-tele-show" name="middle-cone-tele">0</text><br />
+
+        <label for="upper-cone-tele">Upper cone:</label>
+        <input
+          type="button"
+          id="upper-cone-tele-add"
+          name="upper-cone-tele"
+          value="+"
+          onclick="changeValue(true, 'upper-cone-tele-show')"
+        />
+        <input
+          type="button"
+          id="upper-cone-tele-decr"
+          name="upper-cone-tele"
+          value="-"
+          onclick="changeValue(false, 'upper-cone-tele-show')"
+        />
+        <text id="upper-cone-tele-show" name="upper-cone-tele">0</text><br />
+
+        <label for="game-pieces-dropped">Game pieces dropped:</label>
+        <input
+          type="button"
+          id="game-piece-add"
+          name="upper-cone-tele"
+          value="+"
+          onclick="changeValue(true, 'game-piece-show')"
+        />
+        <input
+          type="button"
+          id="game-piece-decr"
+          name="upper-cone-tele"
+          value="-"
+          onclick="changeValue(false, 'game-piece-show')"
+        />
+        <text id="game-piece-show" name="game-piece-tele">0</text><br />
+
+        <label for="defence">Is defensive:</label>
+        <input type="checkbox" id="defence" name="defence" /><br />
+
+        <label for="">Struggled with defense:</label>
+        <input type="checkbox" id="struggle-defense" name="struggle-defense" />
+        <br />
+
+        <label for="balancing-tele">Balancing:</label>
+        <input type="checkbox" id="balancing-tele" name="balancing-tele" />
+
+        <h3>Remarks:</h3>
+
+        <label for="remarks">Remarks:</label><br />
+        <textarea
+          id="remarks"
+          name="remarks"
+          placeholder="-what to specify:
+          
+-if robot had problems during the match
+-Driver mistakes
+-Something cool that the robot was doing
+-Was it fast? 
+        "
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" value="Submit" onclick="downloadCSV()" />
+      </form>
+    </div>
+  </body>
+</html>
